@@ -330,7 +330,9 @@ def test_issue_4356():
 
 def test_divisors():
     assert divisors(28) == [1, 2, 4, 7, 14, 28]
+    assert divisors(factorint(28)) == [1, 2, 4, 7, 14, 28]
     assert [x for x in divisors(3*5*7, 1)] == [1, 3, 5, 15, 7, 21, 35, 105]
+    assert [x for x in divisors({19:1,61:1}, 1)] == [1, 19, 61, 19*61]
     assert divisors(0) == []
 
 

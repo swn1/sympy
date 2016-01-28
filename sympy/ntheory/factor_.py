@@ -1241,6 +1241,11 @@ def divisors(n, generator=False):
     prime factors (counting repeated factors). If only the number of
     factors is desired use divisor_count(n).
 
+    Computing (or counting) the divisors is equivalent to factoring
+    and factorint is called internally.  For efficiency, n may be
+    passed in (partially) factored form as a dictionary and factorint
+    will not be called.
+
     Examples
     ========
 
